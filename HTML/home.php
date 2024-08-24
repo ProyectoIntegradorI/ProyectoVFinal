@@ -16,9 +16,9 @@
     <style></style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#">AETEME</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -38,7 +38,6 @@
             <li class="nav-item">
               <a class="nav-link" href="info.html">Información</a>
             </li>
-          
             <li class="nav-item">
               <a class="nav-link" href="login.html">Iniciar Sesión</a>
             </li>
@@ -54,20 +53,27 @@
         <span>DE TENIS DE MESA</span>
       </div>
       <div class="Logo">
-        <img src="../img/aetemeLogo2.jpg" alt="Logo2" width="100%" />
+        <img src="../img/aetemeLogo2.jpg" alt="Logo2" />
       </div>
     </header>
     <div class="container-sm">
-          <h1>Noticias</h1>
-          <p>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid0ayfKjZ3iX9xHKA2Gr2fMuMx1nzLiejHPEeCBG9vS8XFHRKEsnWk7fPCTYtkUu6iMl&show_text=true&width=500" width="500" height="479" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid02PkLBDcugHttXeSJUjN191KWSYACo2PE2dBBzkBPsGFHktoCvrgf7vCyR2XPcbLPal&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid0CiUGGeTQFNs7hUx8YcJWKaTkfpCetCaCDSrQPhk4TxkWVLiBVpkQdnaiTx7MKaupl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid08XG1L52CvnPiB7mWyBXf6nFaftoAMD9zK3YHoN8nCx27VuP6Afq3gy3cx4FEnmmel&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid024MU5mNn7vpWv1qmuukX8kPC6GyunKMJraBjZQv39JEZ3eyyoNkrFfnjuXT9uHhSzl&show_text=true&width=500" width="500" height="485" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          </p>
-      </div>
-   
+  <h1>Noticias</h1>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid0ayfKjZ3iX9xHKA2Gr2fMuMx1nzLiejHPEeCBG9vS8XFHRKEsnWk7fPCTYtkUu6iMl&show_text=true&width=500" width="100%" height="479" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+    <div class="col-md-6 mb-3">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid02PkLBDcugHttXeSJUjN191KWSYACo2PE2dBBzkBPsGFHktoCvrgf7vCyR2XPcbLPal&show_text=true&width=500" width="100%" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+    <div class="col-md-6 mb-3">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid0CiUGGeTQFNs7hUx8YcJWKaTkfpCetCaCDSrQPhk4TxkWVLiBVpkQdnaiTx7MKaupl&show_text=true&width=500" width="100%" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+    <div class="col-md-6 mb-3">
+      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Faeteme.esparza.9%2Fposts%2Fpfbid08XG1L52CvnPiB7mWyBXf6nFaftoAMD9zK3YHoN8nCx27VuP6Afq3gy3cx4FEnmmel&show_text=true&width=500" width="100%" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+  
+  </div>
+</div>
     <footer class="footer">
       <div class="box">
         <h4>Síguenos</h4>
