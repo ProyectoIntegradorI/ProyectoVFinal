@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdf->SetFont('Arial', '', 12);
 
     // Conexión a la base de datos
-    $conn = new mysqli("localhost", "root", "Sanchez18.", "proyectoint1");
+    $conn = new mysqli("localhost", "root", "tamara11", "skila");
     if ($conn->connect_error) {
         die("Conexión fallida: " . $conn->connect_error);
     }
