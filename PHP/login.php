@@ -3,8 +3,10 @@ session_start();
 
 $servername = "localhost";
 $username = "root";
-$password = "Sanchez18.";
-$dbname = "proyectoint1";
+
+$password = "tamara11";
+$dbname = "skila";
+
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -34,48 +34,41 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     
     <script>
-        function getDetails(userId) {
-            if (userId) {
-                fetch(`../PHP/getDetalles.php?userId=${userId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById('userId').value = data.userId;
-                        document.getElementById('name_user').value = data.name_user;
-                        document.getElementById('apellidoPat').value = data.apellidoPat;
-                        document.getElementById('apellidoMar').value = data.apellidoMar;
-                        document.getElementById('tipoSangre').value = data.tipoSangre;
-                        document.getElementById('lateralidad').value = data.lateralidad;
-                        document.getElementById('enfermedades').value = data.enfermedades;
-                        document.getElementById('sexo').value = data.sexo;
-                        document.getElementById('edad').value = data.edad;
-                        document.getElementById('peso').value = data.peso;
-                        document.getElementById('altura').value = data.altura;
-                    })
-                    .catch(error => console.error('Error:', error));
-            }
+    function getDetails(userId) {
+        if (userId) {
+            fetch(`../PHP/getDetalles.php?userId=${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('name_user').value = data.name_user;
+                    document.getElementById('apellidoPat').value = data.apellidoPat;
+                    document.getElementById('apellidoMar').value = data.apellidoMar;
+                    document.getElementById('tipoSangre').value = data.tipoSangre;
+                    document.getElementById('lateralidad').value = data.lateralidad;
+                    document.getElementById('enfermedades').value = data.enfermedades;
+                    document.getElementById('sexo').value = data.sexo;
+                    document.getElementById('edad').value = data.edad;
+                    document.getElementById('peso').value = data.peso;
+                    document.getElementById('altura').value = data.altura;
+                })
+                .catch(error => console.error('Error:', error));
         }
-    </script>
+    }
+</script>
 </head>
 <body>
     <div class="container mt-3">
         <img src="../img/headerimage.png" alt="Encabezado" class="header-image">
         <h1 class="mt-3 mb-4">Actualizar Atleta</h1>
-       
   
         <form action="../PHP/modif.php" method="POST">
             <div class="mb-3">
                 <label for="deportistas" class="form-label">Seleccionar Deportista:</label>
                 <select id="deportista" name="userId" onchange="getDetails(this.value)">
-                 
-                 <?php include '../PHP/filtrar.php'; ?>
-                  
+                    <?php include '../PHP/filtrar.php'; ?>
                 </select>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="userId" class="form-label">Cedula:</label>
-                    <input type="text" class="form-control" id="userId" name="userId" required>
-                </div>
+                <!-- ID Removed to avoid conflict -->
                 <div class="col-md-6 mb-3">
                     <label for="name_user" class="form-label">Nombre:</label>
                     <input type="text" class="form-control" id="name_user" name="name_user" required>
@@ -92,31 +85,38 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <label for="tipoSangre" class="form-label">Tipo de Sangre:</label>
                     <select class="form-control" id="tipoSangre" name="tipoSangre" required>
                         <option value="">Seleccione</option> 
-                        <option value="">A</option> 
-                        <option value="">B</option> 
-                        <option value="">AB+</option> 
-                        <option value="">O+</option>
-                        <option value="">O-</option>
+                        <option value="A">A</option> 
+                        <option value="B">B</option> 
+                        <option value="AB+">AB+</option> 
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="lateralidad" class="form-label">Lateralidad:</label>
-                    <select class="form-control" id="latelaridad" name="latelaridad" required>
+                    <select class="form-control" id="lateralidad" name="lateralidad" required>
                         <option value="">Seleccione</option> 
-                        <option value="">Izquierda</option> 
-                        <option value="">Derecha</option> 
+                        <option value="Izquierda">Izquierda</option> 
+                        <option value="Derecha">Derecha</option> 
+                    </select>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="enfermedades" class="form-label">Enfermedades:</label>
                     <select class="form-control" id="enfermedades" name="enfermedades" required>
+                        <option value="">Seleccione</option> 
+                        <option value="Ninguna">Ninguna</option> 
+                        <option value="Asma">Asma</option> 
+                        <option value="Diabetes">Diabetes</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="sexo" class="form-label">Sexo:</label>
                     <select class="form-control" id="sexo" name="sexo" required>
                         <option value="">Seleccione</option> 
-                        <option value="">M</option> 
-                        <option value="">F</option> 
-                        <option value="">O</option> 
+                        <option value="M">M</option> 
+                        <option value="F">F</option> 
+                        <option value="O">O</option> 
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -134,10 +134,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
             <button type="submit" class="btn btn-primary">Actualizar Atleta</button>
             <a href="../HTML/admin.php" class="btn-primary">Panel de control</a>
-           
         </form>
     </div>
-  
-  
 </body>
+</html>
+
 </html>
