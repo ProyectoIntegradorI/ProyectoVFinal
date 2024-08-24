@@ -1,0 +1,123 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.container {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    color: #032F40;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.form-label {
+    color: #024873;
+    font-weight: bold;
+}
+
+.form-select {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.form-select:focus {
+    background-color: #f0f0f0;
+    color: #000000;
+    border-color: #024873;
+    box-shadow: 0 0 10px #024873;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    border-color: #d9534f;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #024873;
+    border-color: #024873;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #03658C;
+    transform: scale(1.05);
+}
+
+
+.message {
+    display: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(190deg, #66889c,  #0c3d52), #fbfeff ;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+    transform: perspective(500px) rotateX(4deg);
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    animation: slideIn 1s ease-in-out;
+}
+
+.message.show {
+    display: block;
+    opacity: 1;
+}
+
+.message.success {
+    background: linear-gradient(135deg, #4CAF50, #3E8E41);
+}
+
+.message.error {
+    background: linear-gradient(135deg, #f44336, #c62828);
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(135deg, #024873, #03658C);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    color: #FFFFFF;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #032F40; /* Fondo de la tarjeta */
+}
+
+.card-header {
+    background-color: #F29F05; /* Color del encabezado */
+    color: #032F40; /* Color del texto del encabezado */
+    border-radius: 12px 12px 0 0;
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.btn-inicio {
+    background-color: #F2B705; /* Botón principal */
+    border-color: #F2B705;
+    color: #032F40;
+}
+
+.btn-outline-secondary {
+    border-color: #F29F05;
+    color: #F29F05;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #F29F05;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    background-color: #F2B705;
+    border-color: #F2B705;
+    color: #032F40;
+}
+
+a {
+    text-decoration: none;
+    color: #F2B705;
+}
+
+a:hover {
+    color: #F29F05;
+}
+
+.text-muted {
+    color: #03658C !important;
+}

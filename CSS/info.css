@@ -1,0 +1,179 @@
+body {
+  background-color: #03658c;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #03658c; /* Azul de fondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 10px auto;
+  width: 95%;
+}
+
+.navbar-brand {
+  color: #f2b705; /* Color del texto de la marca */
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link {
+  color: #f2b705; /* Color de los enlaces */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white; /* Color del texto al pasar el ratón */
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border-color: #f2b705; /* Color del borde del botón de navegación */
+  border-radius: 8px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBkPSJNNCwxMEg0MFYxMEg0WiBNNCwyMEg0MFYyMEg0WiBNNCwzMEg0MFYzMEg0WiIgZmlsbD0iIzAyNDg3MyIvPjwvc3ZnPg==");
+}
+
+/* Header */
+.header-container {
+  background-color: #263f73;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin: 15px 5px;
+}
+
+/* Container */
+.container-sm {
+  padding: 20px;
+  background-color: #e3e6e9;
+  border: 1px solid #dff2fa;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 850px;
+  margin: 15px auto;
+}
+
+.container-sm h1 {
+  font-size: 1.8rem;
+  color: #03658c; /* Color del encabezado */
+  margin-bottom: 15px;
+}
+
+.container-sm p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.content img {
+  flex-shrink: 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #f29b30;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.6);
+  margin-top: 30px;
+}
+
+footer .box .social-net a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #000000;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.9s ease, transform 0.3s ease;
+}
+
+footer .box .social-net a:hover {
+  background-color: #ffd07a;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+footer .group-2 {
+  color: #000000;
+  font-size: 1rem;
+}
+
+.nav-link {
+  position: relative;
+  left: 735px;
+}
+
+
+@keyframes flicker {
+  0% { filter: drop-shadow(0 0 10px rgba(40, 138, 173, 0.4)); }
+  50% { filter: drop-shadow(0 0 20px rgba(163, 98, 23, 0.986)); }
+  100% { filter: drop-shadow(0 0 10px rgba(40, 138, 173, 0.4)); }
+}
+
+.image-absolute {
+  position: absolute;
+  width: 150px; /* Tamaño ajustado para mayor visibilidad */
+  opacity: 1.1; /* Opcional: Ajusta la opacidad para un efecto más sutil */
+  filter: drop-shadow(0 0 50px rgba(216, 142, 31, 0.993)); /* Efecto de sombra inicial con color especificado */
+  animation: flicker 2.5s infinite; /* Aplica la animación de parpadeo infinita */
+}
+
+
+.image-1 {
+  top: 20%;
+  left: 6%;
+  width: 250px;
+}
+
+.image-2 {
+  top: 20%;
+  left: 81%;
+  width: 250px;
+}
+
+.image-container{
+  position: relative;
+  bottom: -190px;
+}
+
+
+.container-fluid header-container{
+position: relative;
+top: -70px;
+
+}
+
+.footer{
+  position: relative;
+  top: 75px;
+}
+
+.container-sm{
+  position: relative;
+  top: 30px;
+}

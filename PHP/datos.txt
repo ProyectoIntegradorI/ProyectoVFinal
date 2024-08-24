@@ -1,0 +1,32 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "aaronCR14";
+$dbname = "Administra";
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $edad = $_POST['edad'];
+    $categoria = $_POST['categoria'];
+
+    $sql = "INSERT INTO tu_tabla (nombre, edad, categoria)
+            VALUES ('$nombre', $edad, '$categoria')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Nuevo atleta agregado correctamente";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>

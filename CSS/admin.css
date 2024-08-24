@@ -1,0 +1,131 @@
+body {
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+  color: #032F40;
+  margin: 0;
+  padding: 0;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke; 
+  padding: 50px 20px;
+  border-radius: 10px;
+ 
+}
+
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 20px 0; /* Reduce el margen vertical para evitar saturación */
+}
+
+.nav-link {
+  color: #f2b705;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #024873, #03658c);
+ 
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f2b705;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: #ffd07a;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px #013243, -2px -2px 5px #025f7e; /* Sombra más ligera */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:active {
+  background: linear-gradient(145deg, #025f7e, #013243);
+  box-shadow: inset 1px 1px 3px #013243, inset -1px -1px 3px #025f7e; /* Sombra interna más ligera */
+}
+
+header {
+  background-color: #024873;
+  color: #ffffff;
+  display: flex;
+  justify-content: center; /* Centrar el contenido del encabezado */
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  flex-direction: column; /* Alinear el contenido en columna */
+}
+
+header .logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f2b705;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+header .logo:hover {
+  color: #ffd07a;
+}
+
+footer {
+  background-color: #024873;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 300px;
+}
+
+footer .box .social-net a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #000000;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.social-media img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,79 @@
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: whitesmoke; /* Color de fondo personalizado */
+}
+
+.navbar-brand {
+  color: #f2b705;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+  color: #f2b705;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: white; /* Color al pasar el mouse */
+}
+
+.navbar-toggler {
+  border-color: #f2b705; /* Color del borde del botón toggler */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBkPSJNNCwxMEg0MFYxMEg0WiBNNCwyMEg0MFYyMEg0WiBNNCwzMEg0MFYzMEg0WiIgZmlsbD0iIzAyNDg3MyIvPjwvc3ZnPg=="); /* Color del icono del botón toggler */
+}
+
+.container-fluid {
+  background-color: whitesmoke;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.header-container {
+  background-color: #263f73;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container img {
+  margin: 0 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: #f29b30;
+  text-align: center;
+}
+footer .box .social-net a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #000000;
+  margin-right: 10px;
+  text-align: center;
+}
+footer .box .social-net a:hover {
+  color: #ffd07a;
+}
+
+footer .group-2 {
+  color: #000000;
+}
