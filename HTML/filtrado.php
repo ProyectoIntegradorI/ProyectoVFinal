@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT userId, name_user, apellidoPat, apellidoMar, tipoSangre, lateralidad, enfermedades, sexo, edad, peso, altura FROM deportistas";
+$sql = "SELECT userId, name_user, apellidoPat, apellidoMar, tipoSangre, lateralidad, enfermedades, sexo, edad, peso, altura, status FROM deportistas";
 $result = $conn->query($sql);
 ?>
 <?php
@@ -81,6 +81,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <th>Edad</th>
             <th>Peso</th>
             <th>Altura</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
@@ -101,6 +102,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 echo "<td>" . htmlspecialchars($row['edad']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['peso']) . "</td>";
                 echo "<td>" . htmlspecialchars($row['altura']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['status']) . "</td>";
                 echo "</tr>";
             }
         } else {

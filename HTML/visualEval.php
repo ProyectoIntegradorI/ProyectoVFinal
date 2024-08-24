@@ -69,7 +69,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
    
 </head>
 
-<body>
+<body onload="filterTable()">
     <div class="encabezado">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -83,7 +83,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     <h1>Lista de Evaluaciones</h1>
 
-    <!-- Formulario para filtrar por jugador -->
+    
     <!-- Formulario para filtrar por jugador -->
 <div class="search-form-container">
     <form method="get" action="">
@@ -113,28 +113,34 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </tr>
     </thead>
     <tbody>
-    <?php
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td><input class='form-check-input' type='checkbox' name='selectedRows[]' value='" . htmlspecialchars($row['evalId']) . "'></td>"; 
-            echo "<td>" . htmlspecialchars($row['evalId']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['nombreCompleto']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['admiId']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['IMC']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['porcentGras']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['aguaCorp']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['pesoEnMusc']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['nivProt']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['fecha']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['observa']) . "</td>";
-            echo "</tr>";
-        }
-    } else {
-        echo "<tr><td colspan='11'>No se encontraron evaluaciones</td></tr>";
+<?php
+$row_count = 0; // Contador de filas
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        // Añadir una clase para las filas ocultas si la fila es mayor a 3 y no se está realizando una búsqueda
+        $row_class = ($row_count >= 3 && empty($searchTerm)) ? 'hidden-row' : '';
+        echo "<tr class='{$row_class}'>";
+        echo "<td><input class='form-check-input' type='checkbox' name='selectedRows[]' value='" . htmlspecialchars($row['evalId']) . "'></td>"; 
+        echo "<td>" . htmlspecialchars($row['evalId']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['nombreCompleto']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['admiId']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['IMC']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['porcentGras']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['aguaCorp']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['pesoEnMusc']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['nivProt']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['fecha']) . "</td>";
+        echo "<td>" . htmlspecialchars($row['observa']) . "</td>";
+        echo "</tr>";
+        $row_count++;
     }
-    ?>
-    </tbody>
+} else {
+    echo "<tr><td colspan='11'>No se encontraron evaluaciones</td></tr>";
+}
+?>
+</tbody>
+
     </table>
     <button type="submit" class="btn-primary">Generar PDF</button>
     </form>
@@ -149,7 +155,7 @@ function filterTable() {
     tr = table.getElementsByTagName("tr");
 
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[1]; // Columna de "Nombre del Atleta"
+        td = tr[i].getElementsByTagName("td")[2]; // Columna de "Nombre del Atleta"
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toLowerCase().indexOf(filter) > -1) {
@@ -157,10 +163,18 @@ function filterTable() {
             } else {
                 tr[i].style.display = "none";
             }
-        }       
+        }
+    }
+
+    // Si hay un término de búsqueda, muestra todas las filas
+    if (filter) {
+        for (i = 0; i < tr.length; i++) {
+            tr[i].classList.remove('hidden-row');
+        }
     }
 }
 </script>
+
 
 
 </body>

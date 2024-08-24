@@ -124,3 +124,7 @@ tr:hover {
   margin: 0;
   vertical-align: middle;
 }
+
+.hidden-row {
+  display: none;
+}
